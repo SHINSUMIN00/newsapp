@@ -1,0 +1,53 @@
+package com.example.teamproject;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.widget.Button;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class news extends AppCompatActivity {
+
+    Button mbtn_ur2;
+    Button mbtn_ur3;
+    Button mbtn_ur4;
+    Button mbtn_ur5;
+
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.news);
+
+
+        mbtn_ur2 = findViewById(R.id.btn_ur2);
+
+        mbtn_ur2.setOnClickListener(b -> {
+            Intent urlintent1 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://news.naver.com/"));
+            startActivity(urlintent1);
+
+            mbtn_ur3 = findViewById(R.id.btn_ur3);
+
+            mbtn_ur3.setOnClickListener(f -> {
+                Intent urlintent3 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://news.daum.net/"));
+                startActivity(urlintent3);
+
+                mbtn_ur4 = findViewById(R.id.btn_ur4);
+
+                mbtn_ur4.setOnClickListener(g -> {
+                    Intent urlintent4 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/search?q=%EA%B5%AC%EA%B8%80+%EB%89%B4%EC%8A%A4&biw=1707&bih=948&tbm=nws&sxsrf=ALiCzsY25gzQldtfIEKsFW2zpQ7TVxoIvQ%3A1669796533479&ei=tRKHY572HMum-Qa7_Kz4DA&ved=0ahUKEwjepObpvNX7AhVLU94KHTs-C88Q4dUDCA0&uact=5&oq=%EA%B5%AC%EA%B8%80+%EB%89%B4%EC%8A%A4&gs_lcp=Cgxnd3Mtd2l6LW5ld3MQAzIFCAAQgAQyBAgAEEMyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoKCAAQsQMQgwEQQzoLCAAQgAQQsQMQgwE6BAgAEAM6CAgAEIAEELEDUJoGWIsXYK8YaARwAHgCgAF1iAGxCpIBAzUuOJgBAKABAbABAMABAQ&sclient=gws-wiz-news"));
+                    startActivity(urlintent4);
+
+                    mbtn_ur5 = findViewById(R.id.btn_ur5);
+
+                    mbtn_ur5.setOnClickListener(h -> {
+                        Intent urlintent5 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://invest.zum.com/domestic?utm_source=google&utm_medium=pc&utm_campaign=cpc&utm_content=domestic&gclid=Cj0KCQiAm5ycBhCXARIsAPldzoVKFLftFh8MjP1VjCDLch75ACXPcX1Otwg5pjZkJgAZ7MkmM-_E8r8aAhHzEALw_wcB"));
+                        startActivity(urlintent5);
+
+
+
+
+    });});});});}}
+

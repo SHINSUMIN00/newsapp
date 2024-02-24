@@ -1,0 +1,42 @@
+package com.example.teamproject;
+
+
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+    Button mbtn_url;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button button = findViewById(R.id.calendar);
+        button.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), calendar.class);
+            startActivity(intent);
+
+
+            Button button1 = findViewById(R.id.btn_ur2);
+            button1.setOnClickListener(vi -> {
+                Intent intent1 = new Intent(getApplicationContext(), news.class);
+                startActivity(intent1);
+
+                mbtn_url = findViewById(R.id.btn_url);
+
+                mbtn_url.setOnClickListener(v -> {
+                    Intent urlintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%EB%84%A4%EC%9D%B4%EB%B2%84+%EC%98%A4%EB%8A%98%EC%9D%98+%EC%9A%B4%EC%84%B8%EB%B3%B4%EA%B8%B0"));
+                    startActivity(urlintent);
+
+
+                });
+            });
+        });
+    }
+
+}

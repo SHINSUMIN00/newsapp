@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        tools:ignore="RedundantNamespace"
+        tools:layout_editor_absoluteX="-106dp"
+        tools:layout_editor_absoluteY="16dp">
+
+
+        <AnalogClock
+            android:id="@+id/clock1"
+            android:layout_width="294dp"
+            android:layout_height="269dp" />
+
+        <DigitalClock
+            android:id="@+id/clock3"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:textColor="#000000"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/calendar"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:text="켈린더"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText,MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_ur2"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:text="소식"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btn_url"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:text="오늘의 운세"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
